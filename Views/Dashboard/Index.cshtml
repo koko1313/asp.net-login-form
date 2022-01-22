@@ -1,0 +1,15 @@
+﻿
+@{
+    if (Session["userID"] == null)
+    {
+        Response.Redirect("~/Users/Login");
+    }
+    ViewBag.Title = "Dashboard";
+}
+
+<h2>Dashboard</h2>
+
+<p><b>Username:</b> @Session["username"]</p>
+<p><b>Role:</b> @Session["role"]</p>
+
+<a href="@Url.Action("Logout", "Users")">Log out</a>

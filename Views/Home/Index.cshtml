@@ -8,6 +8,15 @@
     <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
 </div>
 
+@if (Session["role"] != null && Session["role"].ToString() == "Admin")
+{
+    <div class="row">
+        <div class="col-md">
+            <h2 style="color:red">You see this because you are <b>THE ADMINISTRATOR DUDE!!!</b></h2>
+        </div>
+    </div>
+}
+
 <div class="row">
     <div class="col-md-4">
         <h2>Getting started</h2>
