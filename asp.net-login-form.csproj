@@ -134,23 +134,18 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Users.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Users.Context.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Users.cs">
-      <DependentUpon>UsersDataModel.tt</DependentUpon>
+      <DependentUpon>Users.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\UsersDataModel.Context.cs">
+    <Compile Include="Models\Users.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>UsersDataModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\UsersDataModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>UsersDataModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\UsersDataModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>UsersDataModel.edmx</DependentUpon>
+      <DependentUpon>Users.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -163,25 +158,25 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Models\UsersDataModel.Context.tt">
+    <Content Include="Models\Users.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>UsersDataModel.Context.cs</LastGenOutput>
-      <DependentUpon>UsersDataModel.edmx</DependentUpon>
+      <DependentUpon>Users.edmx</DependentUpon>
+      <LastGenOutput>Users.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\UsersDataModel.tt">
+    <Content Include="Models\Users.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>UsersDataModel.edmx</DependentUpon>
-      <LastGenOutput>UsersDataModel.cs</LastGenOutput>
+      <DependentUpon>Users.edmx</DependentUpon>
+      <LastGenOutput>Users1.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include=".gitignore" />
-    <EntityDeploy Include="Models\UsersDataModel.edmx">
+    <EntityDeploy Include="Models\Users.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>UsersDataModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>Users.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\UsersDataModel.edmx.diagram">
-      <DependentUpon>UsersDataModel.edmx</DependentUpon>
+    <Content Include="Models\Users.edmx.diagram">
+      <DependentUpon>Users.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
