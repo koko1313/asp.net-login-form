@@ -6,10 +6,10 @@
 	```sql
 	CREATE TABLE [dbo].[Users]
 	(
-		[Id] INT NOT NULL PRIMARY KEY, 
-		[Username] VARCHAR(50) NOT NULL, 
-		[Password] VARCHAR(255) NOT NULL, 
-		[Role] VARCHAR(50) NOT NULL
+		[Id] INT NOT NULL PRIMARY KEY IDENTITY(1, 1), 
+		[username] VARCHAR(50) NOT NULL, 
+		[password] VARCHAR(255) NOT NULL, 
+		[role] VARCHAR(50) NOT NULL
 	)
 	```
 	
