@@ -40,4 +40,3 @@ namespace asp.net_login_form.Models
         public string LoginErrorMessage { get; set; }
     }
 }
-
