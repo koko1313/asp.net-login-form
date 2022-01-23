@@ -10,10 +10,6 @@
 {
 <table>
     <tr>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
         <td>
             @Html.LabelFor(model => model.username)
         </td>
@@ -50,6 +46,8 @@
     </tr>
 </table>
 }
+
+<a href="@Url.Action("Register", "Users")">Sign up</a>
 
 <script src="~/Scripts/jquery-3.4.1.min.js"></script>
 <script src="~/Scripts/jquery.validate.min.js"></script>

@@ -13,9 +13,12 @@ namespace asp.net_login_form.Models
     using System.Collections.Generic;
     using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
 
     public partial class Users
     {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
         [DisplayName("Username")]
@@ -27,8 +30,14 @@ namespace asp.net_login_form.Models
         [Required(ErrorMessage = "This field is required.")]
         public string password { get; set; }
 
+        [DisplayName("Confirm Password")]
+        [DataType(DataType.Password)]
+        [Required(ErrorMessage = "You must confirm your password.")]
+        public string confirmPassword { get; set; }
+
         public string role { get; set; }
 
         public string LoginErrorMessage { get; set; }
     }
 }
+

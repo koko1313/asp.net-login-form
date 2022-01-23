@@ -1,0 +1,48 @@
+﻿@model asp.net_login_form.Models.Users
+
+@{
+    ViewBag.Title = "Register";
+}
+
+<h2>Register</h2>
+
+@using (Html.BeginForm("SignUp", "Users", FormMethod.Post))
+{
+<table>
+    <tr>
+        <td>
+            @Html.LabelFor(model => model.username)
+        </td>
+        <td>
+            @Html.EditorFor(model => model.username)
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.LabelFor(model => model.password)
+        </td>
+        <td>
+            @Html.EditorFor(model => model.password)
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.LabelFor(model => model.confirmPassword)
+        </td>
+        <td>
+            @Html.EditorFor(model => model.confirmPassword)
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            @Html.DisplayFor(model => model.LoginErrorMessage)
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            <input type="submit" name="name" value="Register" />
+        </td>
+    </tr>
+</table>
+}

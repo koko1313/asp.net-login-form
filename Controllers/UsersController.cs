@@ -15,12 +15,17 @@ namespace asp.net_login_form.Controllers
             return View("Login");
         }
 
+        public ActionResult Register()
+        {
+            return View("Register");
+        }
+
         [HttpPost]
-        public ActionResult Authorize(asp.net_login_form.Models.Users userModel)
+        public ActionResult Authorize(Users userModel)
         {
             using (UsersEntities db = new UsersEntities())
             {
-                var userDetails = db.Users.Where(x => x.username == userModel.username && x.password == userModel.password).FirstOrDefault();
+                var userDetails = db.Users.Where(user => user.username == userModel.username && user.password == userModel.password).FirstOrDefault();
                 if (userDetails == null)
                 {
                     userModel.LoginErrorMessage = "Wrong username or password.";
@@ -34,7 +39,18 @@ namespace asp.net_login_form.Controllers
                     return RedirectToAction("Index", "Dashboard");
                 }
             }
-            return View("Login");
+        }
+
+        [HttpPost]
+        public ActionResult SignUp(Users userModel)
+        {
+            using (UsersEntities db = new UsersEntities())
+            {
+                userModel.role = "User";
+                db.Users.Add(userModel);
+                db.SaveChanges();
+                return RedirectToAction("Login", "Users");
+            }
         }
 
         public ActionResult Logout()
